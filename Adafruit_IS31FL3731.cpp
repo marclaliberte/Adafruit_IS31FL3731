@@ -16,7 +16,7 @@ Adafruit_IS31FL3731_Wing::Adafruit_IS31FL3731_Wing(void) : Adafruit_IS31FL3731(1
 }
 
 boolean Adafruit_IS31FL3731::begin(uint8_t addr) {
-  Wire.begin();
+  Wire.begin(21,22,400*1000);
 
   _i2caddr = addr;
   _frame = 0;
